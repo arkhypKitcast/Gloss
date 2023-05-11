@@ -140,7 +140,7 @@ public struct Decoder {
      
      - returns: Value decoded from JSON.
      */
-    public static func decode<T: JSONDecodable>(decodableForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> T? {
+    public static func decode<T: GLOSS_JSONDecodable>(decodableForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> T? {
         return {
             json in
             
@@ -160,7 +160,7 @@ public struct Decoder {
      
      - returns: Value decoded from JSON.
      */
-    public static func decode<T: JSONDecodable>(decodableArrayForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [T]? {
+    public static func decode<T: GLOSS_JSONDecodable>(decodableArrayForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [T]? {
         return {
             json in
             
@@ -189,7 +189,7 @@ public struct Decoder {
      
      - returns: Value decoded from JSON.
      */
-    public static func decode<T:JSONDecodable>(decodableDictionaryForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [String : T]? {
+    public static func decode<T:GLOSS_JSONDecodable>(decodableDictionaryForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [String : T]? {
         return {
             json in
             
@@ -216,7 +216,7 @@ public struct Decoder {
      
      - returns: Value decoded from JSON.
      */
-    public static func decode<T:JSONDecodable>(decodableDictionaryForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [String : [T]]? {
+    public static func decode<T:GLOSS_JSONDecodable>(decodableDictionaryForKey key: String, keyPathDelimiter: String = GlossKeyPathDelimiter) -> (JSON) -> [String : [T]]? {
         return {
             json in
             

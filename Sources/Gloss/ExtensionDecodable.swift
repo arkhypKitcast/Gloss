@@ -24,7 +24,7 @@
 
 import Foundation
 
-public extension JSONDecodable {
+public extension GLOSS_JSONDecodable {
     
     /**
      Initializes array of model objects from provided data.
@@ -58,7 +58,7 @@ public extension JSONDecodable {
      
      - returns: Object or nil.
      */
-    static func from<T: Decodable & JSONDecodable>(decodableData data: Data, jsonDecoder: JSONDecoder = JSONDecoder(), serializer: JSONSerializer = GlossJSONSerializer(), options: JSONSerialization.ReadingOptions = .mutableContainers, logger: Logger = GlossLogger()) -> T? {
+    static func from<T: Decodable & GLOSS_JSONDecodable>(decodableData data: Data, jsonDecoder: JSONDecoder = JSONDecoder(), serializer: JSONSerializer = GlossJSONSerializer(), options: JSONSerialization.ReadingOptions = .mutableContainers, logger: Logger = GlossLogger()) -> T? {
         do {
             return try jsonDecoder.decode(T.self, from: data)
         } catch {
@@ -79,7 +79,7 @@ public extension JSONDecodable {
      
      - returns: Object or nil.
      */
-    static func from<T: Decodable & JSONDecodable>(decodableJSON json: JSON, jsonDecoder: JSONDecoder = JSONDecoder(), serializer: JSONSerializer = GlossJSONSerializer(), options: JSONSerialization.WritingOptions? = nil, logger: Logger = GlossLogger()) -> T? {
+    static func from<T: Decodable & GLOSS_JSONDecodable>(decodableJSON json: JSON, jsonDecoder: JSONDecoder = JSONDecoder(), serializer: JSONSerializer = GlossJSONSerializer(), options: JSONSerialization.WritingOptions? = nil, logger: Logger = GlossLogger()) -> T? {
         do {
             if let data = serializer.data(from: json, options: options) {
                 return try jsonDecoder.decode(T.self, from: data)

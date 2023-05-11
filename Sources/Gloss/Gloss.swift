@@ -43,12 +43,12 @@ public enum GlossError: Error {
 /**
 Convenience protocol for objects that can be translated from and to JSON.
 */
-public protocol Glossy: JSONDecodable, JSONEncodable { }
+public protocol Glossy: GLOSS_JSONDecodable, GLOSS_JSONEncodable { }
 
 /**
 Enables an object to be decoded from JSON.
 */
-public protocol JSONDecodable {
+public protocol GLOSS_JSONDecodable {
 
     /**
      Returns new instance created from provided JSON.
@@ -64,7 +64,7 @@ public protocol JSONDecodable {
 /**
 Enables an object to be encoded to JSON.
 */
-public protocol JSONEncodable {
+public protocol GLOSS_JSONEncodable {
     
     /**
     Encodes and object as JSON.

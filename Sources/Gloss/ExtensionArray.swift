@@ -27,7 +27,7 @@ import Foundation
 
 // MARK: - Migration to Codable
 
-public extension Array where Element: JSONDecodable & Decodable {
+public extension Array where Element: GLOSS_JSONDecodable & Decodable {
     
     /**
      Returns array of new objects created from provided JSON array.
@@ -84,7 +84,7 @@ public extension Array where Element: JSONDecodable & Decodable {
     
 }
 
-public extension Array where Element: JSONEncodable & Encodable {
+public extension Array where Element: GLOSS_JSONEncodable & Encodable {
     
     /**
      Encodes array of objects as JSON array.
@@ -110,7 +110,7 @@ public extension Array where Element: JSONEncodable & Encodable {
 
 // MARK: - JSONDecodable
 
-public extension Array where Element: JSONDecodable {
+public extension Array where Element: GLOSS_JSONDecodable {
     
     // MARK: Public functions
     
@@ -170,7 +170,7 @@ public extension Array where Element: JSONDecodable {
 
 // MARK: - JSONEncodable
 
-public extension Array where Element: JSONEncodable {
+public extension Array where Element: GLOSS_JSONEncodable {
     
     // MARK: Public functions
     

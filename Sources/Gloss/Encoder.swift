@@ -145,7 +145,7 @@ public struct Encoder {
      
      - returns: JSON encoded from value.
      */
-    public static func encode<T: JSONEncodable>(encodableForKey key: String) -> (T?) -> JSON? {
+    public static func encode<T: GLOSS_JSONEncodable>(encodableForKey key: String) -> (T?) -> JSON? {
         return {
             model in
             
@@ -164,7 +164,7 @@ public struct Encoder {
      
      - returns: JSON encoded from value.
      */
-    public static func encode<T: JSONEncodable>(encodableArrayForKey key: String) -> ([T]?) -> JSON? {
+    public static func encode<T: GLOSS_JSONEncodable>(encodableArrayForKey key: String) -> ([T]?) -> JSON? {
         return {
             array in
             
@@ -193,7 +193,7 @@ public struct Encoder {
      
      - returns: JSON encoded from value.
      */
-    public static func encode<T: JSONEncodable>(encodableDictionaryForKey key: String) -> ([String : T]?) -> JSON? {
+    public static func encode<T: GLOSS_JSONEncodable>(encodableDictionaryForKey key: String) -> ([String : T]?) -> JSON? {
         return {
             dictionary in
             
@@ -220,7 +220,7 @@ public struct Encoder {
      
      - returns: JSON encoded from value.
      */
-    public static func encode<T: JSONEncodable>(encodableDictionaryForKey key: String) -> ([String : [T]]?) -> JSON? {
+    public static func encode<T: GLOSS_JSONEncodable>(encodableDictionaryForKey key: String) -> ([String : [T]]?) -> JSON? {
         return {
             dictionary in
             

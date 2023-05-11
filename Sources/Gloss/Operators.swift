@@ -58,7 +58,7 @@ public func <~~ <T>(key: String, json: JSON) -> T? {
  
  - returns: Decoded value when successful, nil otherwise.
  */
-public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> T? {
+public func <~~ <T: GLOSS_JSONDecodable>(key: String, json: JSON) -> T? {
     return Decoder.decode(decodableForKey: key)(json)
 }
 
@@ -70,7 +70,7 @@ public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> T? {
  
  - returns: Decoded value when successful, nil otherwise.
  */
-public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> [T]? {
+public func <~~ <T: GLOSS_JSONDecodable>(key: String, json: JSON) -> [T]? {
     return Decoder.decode(decodableArrayForKey: key)(json)
 }
 
@@ -82,7 +82,7 @@ public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> [T]? {
  
  - returns: Decoded value when successful, nil otherwise.
  */
-public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> [String : T]? {
+public func <~~ <T: GLOSS_JSONDecodable>(key: String, json: JSON) -> [String : T]? {
     return Decoder.decode(decodableDictionaryForKey: key)(json)
 }
 
@@ -94,7 +94,7 @@ public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> [String : T]? {
  
  - returns: Decoded value when successful, nil otherwise.
  */
-public func <~~ <T: JSONDecodable>(key: String, json: JSON) -> [String : [T]]? {
+public func <~~ <T: GLOSS_JSONDecodable>(key: String, json: JSON) -> [String : [T]]? {
     return Decoder.decode(decodableDictionaryForKey: key)(json)
 }
 
@@ -362,7 +362,7 @@ public func ~~> <T>(key: String, property: [T]?) -> JSON? {
  
  - returns: JSON when successful, nil otherwise.
  */
-public func ~~> <T: JSONEncodable>(key: String, property: T?) -> JSON? {
+public func ~~> <T: GLOSS_JSONEncodable>(key: String, property: T?) -> JSON? {
     return Encoder.encode(encodableForKey: key)(property)
 }
 
@@ -374,7 +374,7 @@ public func ~~> <T: JSONEncodable>(key: String, property: T?) -> JSON? {
  
  - returns: JSON when successful, nil otherwise.
  */
-public func ~~> <T: JSONEncodable>(key: String, property: [T]?) -> JSON? {
+public func ~~> <T: GLOSS_JSONEncodable>(key: String, property: [T]?) -> JSON? {
     return Encoder.encode(encodableArrayForKey: key)(property)
 }
 
@@ -386,7 +386,7 @@ public func ~~> <T: JSONEncodable>(key: String, property: [T]?) -> JSON? {
  
  - returns: JSON when successful, nil otherwise.
  */
-public func ~~> <T: JSONEncodable>(key: String, property: [String : T]?) -> JSON? {
+public func ~~> <T: GLOSS_JSONEncodable>(key: String, property: [String : T]?) -> JSON? {
     return Encoder.encode(encodableDictionaryForKey: key)(property)
 }
 
@@ -398,7 +398,7 @@ public func ~~> <T: JSONEncodable>(key: String, property: [String : T]?) -> JSON
  
  - returns: JSON when successful, nil otherwise.
  */
-public func ~~> <T: JSONEncodable>(key: String, property: [String : [T]]?) -> JSON? {
+public func ~~> <T: GLOSS_JSONEncodable>(key: String, property: [String : [T]]?) -> JSON? {
     return Encoder.encode(encodableDictionaryForKey: key)(property)
 }
 

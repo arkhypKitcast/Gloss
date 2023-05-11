@@ -27,7 +27,7 @@ import Foundation
 
 // MARK: - Migration to Swift.Encodable
 
-public extension JSONEncodable where Self:Encodable {
+public extension GLOSS_JSONEncodable where Self:Encodable {
     
     /**
      Encodes provided model as JSON.
